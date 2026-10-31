@@ -6,23 +6,29 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { SolanaProvider } from './providers/SolanaProvider';
 
 const firebaseConfig = {
-   apiKey: "AIzaSyCSgpxNHXElnUfA5jeuS4FP0YQIAlvyK04",
-   authDomain: "passbook-lavenes.firebaseapp.com",
-   projectId: "passbook-lavenes",
-   storageBucket: "passbook-lavenes.appspot.com",
-   messagingSenderId: "830626874390",
-   appId: "1:830626874390:web:128a29c7b695ebbde4e137",
-   measurementId: "G-P1Y5KTLJ1G",
-   databaseURL: "https://passbook-lavenes-default-rtdb.asia-southeast1.firebasedatabase.app/"
+   apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "",
+   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "",
+   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "",
+   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "",
+   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "",
+   appId: process.env.REACT_APP_FIREBASE_APP_ID || "",
+   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID || "",
+   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL || ""
 };
 
 const googleAuth = {
-   clientId: "830626874390-hb47nkacuk4cn0c6pr788lri14s28jif.apps.googleusercontent.com",
-   clientSecrect: "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"
-}
+   clientId: process.env.REACT_APP_GOOGLE_CLIENT_ID || ""
+};
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+if (typeof window !== "undefined" && firebaseConfig.measurementId) {
+   try {
+      getAnalytics(app);
+   } catch (e) {
+      // Analytics might not initialize in non-production or unsupported environments
+   }
+}
 
 function App() {
    return (
