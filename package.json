@@ -1,7 +1,7 @@
 {
-  "name": "elusiv-webpack-babel",
+  "name": "passbook",
   "version": "1.0.0",
-  "description": "Demo application to show usage of Elusiv's SDK with React and Webpack",
+  "description": "Nền tảng quản lý vé sự kiện và NFT phi tập trung trên hệ sinh thái Solana",
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "webpack --mode=production"
