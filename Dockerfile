@@ -1,12 +1,18 @@
 # ==========================================
 # Stage 1: Build React Frontend
 # ==========================================
-FROM node:18-alpine AS builder
+FROM node:18-bookworm-slim AS builder
 
 WORKDIR /app
 
-# Install git and build tools required by npm for dependencies and native modules
-RUN apk add --no-cache git python3 make g++
+# Install git and build essentials for npm dependencies and native modules
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    python3 \
+    make \
+    g++ \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install dependencies first for Docker layer caching
 COPY package.json package-lock.json* yarn.lock* ./
