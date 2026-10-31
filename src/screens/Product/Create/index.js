@@ -81,7 +81,6 @@ export const NFTCreateScreen = () => {
 
    const handleSubmit = async () => {
       setLoading(true);
-      // await API.NFT.transferToken("AhG3uPDG65p2pTXwUawW6Tpn5s4LFwQxfn9coPnvVaST", "", "9VWpu5PWXo85RJ8vc5punn8dsYGT4rFMhV9Vx5Sy3gpd")
       if (type == "ticket") {
          await API.NFT.mintTicket(
             walletCtx.publicKey,

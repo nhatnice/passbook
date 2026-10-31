@@ -36,7 +36,7 @@ export const CreateSaLeEvents = () => {
              
             <SelectBox onChange={(e) => {
                 setNFT(e.target.value);
-            }} options={[{ id:1, value: "nft", label: "nft" }, { id:2, value: "nhat", label: "nhat" }]}/>
+            }} options={[{ id:1, value: "nft", label: "nft" }, { id:2, value: "ticket", label: "ticket" }]}/>
             
             <TextInput onChange={e => setPriceSale(e.target.value)} placeholder="Price sale" type="number"/>
             
