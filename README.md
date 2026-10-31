@@ -9,6 +9,28 @@
 
 > A modern Web3 event ticketing and digital collectible marketplace built on the **Solana** blockchain, combining friction-free Web2 authentication (Google OAuth) with transparent, tamper-proof Web3 digital asset ownership.
 
+<p align="center">
+  <img src="images/home-dashboard.png" width="31%" alt="PassBook Home Dashboard" />
+  <img src="images/marketplace.png" width="31%" alt="PassBook Marketplace" />
+  <img src="images/profile-swap.png" width="31%" alt="PassBook Profile & Swap" />
+</p>
+
+---
+
+## 📸 Screenshots & Interface Previews
+
+| Discovery & Home | Upcoming Shows & NFTs | Marketplace & Operations |
+| :---: | :---: | :---: |
+| <img src="images/home-dashboard.png" width="100%" alt="Home Dashboard" /> | <img src="images/events-discovery.png" width="100%" alt="Events Discovery" /> | <img src="images/marketplace.png" width="100%" alt="Marketplace" /> |
+| **PassBook Balance & Featured Events** | **Category Filters & Event Catalog** | **Marketplace & Event Creation** |
+
+<br/>
+
+| Ticket & NFT Detail View | Profile Portfolio & NFT Swap |
+| :---: | :---: |
+| <img src="images/ticket-detail.png" width="75%" alt="Ticket & NFT Detail" /> | <img src="images/profile-swap.png" width="75%" alt="Profile & Swap NFT" /> |
+| **On-Chain Collectible Details & Pricing** | **Owned Tickets & P2P Swapping** |
+
 ---
 
 ## 📖 Introduction
