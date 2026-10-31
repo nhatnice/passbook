@@ -5,6 +5,9 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+# Install git and build tools required by npm for dependencies and native modules
+RUN apk add --no-cache git python3 make g++
+
 # Install dependencies first for Docker layer caching
 COPY package.json package-lock.json* yarn.lock* ./
 RUN npm install --legacy-peer-deps
@@ -14,6 +17,7 @@ COPY . .
 
 # Set environment for build
 ENV NODE_ENV=production
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # Build optimized static bundle
 RUN npm run build
